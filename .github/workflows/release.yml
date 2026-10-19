@@ -1,0 +1,33 @@
+name: Build and publish release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Verify release version
+        run: test "v$(tr -d '\r\n' < VERSION)" = "$GITHUB_REF_NAME"
+
+      - name: Build universal app and archive
+        run: ./scripts/package-release.sh
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="$(tr -d '\r\n' < VERSION)"
+          gh release create "$GITHUB_REF_NAME" \
+            "dist/MemoryBar-$version-macOS-universal.zip" \
+            "dist/MemoryBar-$version-macOS-universal.zip.sha256" \
+            --title "MemoryBar $GITHUB_REF_NAME" \
+            --generate-notes
