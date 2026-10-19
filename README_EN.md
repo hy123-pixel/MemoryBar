@@ -4,6 +4,12 @@
 
 MemoryBar is a macOS menu bar memory monitor. It shows current memory usage in the menu bar and lists memory-heavy apps when clicked. You can select an app or process and end it from the context menu or the popover.
 
+![MemoryBar product overview showing menu bar memory usage and the app list](docs/images/product-overview-en.svg)
+
+## How it works
+
+![Usage flow: check menu bar usage, open the app list, select an app, then end it from the context menu](docs/images/how-it-works-en.svg)
+
 ## Features
 
 - Shows system memory usage in the menu bar.

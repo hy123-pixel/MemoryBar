@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">内存栏 MemoryBar 产品介绍</title>
+  <desc id="desc">macOS 菜单栏内存监视器产品介绍与应用面板示意图</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10243a"/><stop offset=".55" stop-color="#133d63"/><stop offset="1" stop-color="#276c9a"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#24577c"/><stop offset="1" stop-color="#15334d"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#55c6ff"/><stop offset="1" stop-color="#2789f5"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#53c8ff" stop-opacity=".25"/><stop offset="1" stop-color="#53c8ff" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-.2" y="-.2" width="1.4" height="1.5"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#06111f" flood-opacity=".42"/></filter>
+    <style>
+      text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC",sans-serif}
+      .en{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+    </style>
+  </defs>
+  <rect width="1440" height="900" rx="36" fill="url(#bg)"/>
+  <circle cx="1180" cy="230" r="360" fill="url(#glow)"/>
+  <circle cx="380" cy="820" r="300" fill="url(#glow)" opacity=".55"/>
+  <path d="M0 120H1440" stroke="#d9f1ff" stroke-opacity=".08"/>
+  <g transform="translate(80 43)">
+    <rect width="42" height="42" rx="13" fill="#55bfff" fill-opacity=".18" stroke="#89dcff" stroke-opacity=".4"/>
+    <path d="M12 14h18v14H12zM16 10v4m10-4v4m-10 14v4m10-4v4M8 18h4m18 0h4M8 24h4m18 0h4" fill="none" stroke="#9be4ff" stroke-width="2" stroke-linecap="round"/>
+    <text x="56" y="21" fill="#f2f8ff" font-size="20" font-weight="700">内存栏</text>
+    <text x="56" y="39" fill="#a8c5dc" font-size="12" class="en">MEMORYBAR</text>
+  </g>
+  <g transform="translate(88 232)">
+    <rect width="164" height="34" rx="17" fill="#ffffff" fill-opacity=".1" stroke="#b7e8ff" stroke-opacity=".2"/>
+    <circle cx="18" cy="17" r="5" fill="#64d7ff"/>
+    <text x="32" y="22" fill="#d8f2ff" font-size="13" font-weight="600">macOS 菜单栏工具</text>
+  </g>
+  <text x="88" y="354" fill="#ffffff" font-size="58" font-weight="750">内存占用</text>
+  <text x="88" y="426" fill="#ffffff" font-size="58" font-weight="750">一眼看清</text>
+  <text x="90" y="474" fill="#b9d7ec" font-size="20" class="en">See what uses your Mac's memory.</text>
+  <text x="90" y="526" fill="#e3f2fc" font-size="17">在菜单栏查看系统用量，点开就能找到占用较高的应用。</text>
+  <text x="90" y="557" fill="#e3f2fc" font-size="17">需要时选择应用，再通过右键菜单结束它。</text>
+  <g transform="translate(90 624)">
+    <circle cx="10" cy="10" r="10" fill="#46b8fa" fill-opacity=".2"/><path d="m5 10 3 3 7-7" fill="none" stroke="#83dcff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="30" y="15" fill="#e3f3ff" font-size="15" font-weight="600">按应用汇总</text>
+    <text x="30" y="39" fill="#a9c9df" font-size="13">合并辅助进程的内存占用</text>
+  </g>
+  <g transform="translate(90 712)">
+    <circle cx="10" cy="10" r="10" fill="#46b8fa" fill-opacity=".2"/><path d="m5 10 3 3 7-7" fill="none" stroke="#83dcff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="30" y="15" fill="#e3f3ff" font-size="15" font-weight="600">本机采集</text>
+    <text x="30" y="39" fill="#a9c9df" font-size="13">不上传应用、进程或内存数据</text>
+  </g>
+  <g filter="url(#shadow)" transform="translate(745 98)">
+    <rect width="610" height="730" rx="28" fill="url(#panel)" stroke="#c3e7ff" stroke-opacity=".35"/>
+    <rect x="1" y="1" width="608" height="61" rx="27" fill="#ffffff" fill-opacity=".07"/>
+    <circle cx="28" cy="31" r="6" fill="#ff6b68"/><circle cx="49" cy="31" r="6" fill="#ffc85d"/><circle cx="70" cy="31" r="6" fill="#55d887"/>
+    <text x="98" y="36" fill="#eaf5ff" font-size="16" font-weight="650">内存使用情况</text>
+    <text x="28" y="92" fill="#acd1ea" font-size="12">系统当前活跃内存占用</text>
+    <text x="538" y="103" fill="#ffffff" font-size="30" font-weight="700" text-anchor="end">77%</text>
+    <rect x="28" y="121" width="554" height="9" rx="5" fill="#ffffff" fill-opacity=".14"/><rect x="28" y="121" width="426" height="9" rx="5" fill="url(#blue)"/>
+    <text x="28" y="154" fill="#b5d0e3" font-size="13">12.46 GB 已使用</text><text x="582" y="154" fill="#b5d0e3" font-size="13" text-anchor="end">16 GB 总内存</text>
+    <path d="M0 178H610" stroke="#d6edff" stroke-opacity=".13"/>
+    <text x="28" y="213" fill="#ffffff" font-size="16" font-weight="700">正在运行的应用</text>
+    <text x="28" y="235" fill="#b5d0e3" font-size="12">按物理内存足迹排序 · 示例数据</text>
+    <text x="582" y="222" fill="#b5d0e3" font-size="12" text-anchor="end">内存</text>
+    <g font-size="15" font-weight="600" fill="#f5f9fd">
+      <rect x="18" y="255" width="574" height="56" rx="12" fill="#4da9ef" fill-opacity=".24"/>
+      <rect x="31" y="269" width="28" height="28" rx="8" fill="#f1f5f8"/><text x="45" y="289" fill="#285b85" font-size="16" text-anchor="middle">C</text>
+      <text x="74" y="290">Google Chrome</text><text x="571" y="290" text-anchor="end">4.3 GB</text>
+      <rect x="31" y="326" width="28" height="28" rx="8" fill="#43c99b"/><path d="M38 335h14v9H38z" fill="none" stroke="#fff" stroke-width="1.5"/><text x="74" y="347">WorkBuddy</text><text x="571" y="347" text-anchor="end">2.5 GB</text>
+      <rect x="31" y="383" width="28" height="28" rx="8" fill="#31c978"/><path d="M38 392h14v9H38z" fill="none" stroke="#fff" stroke-width="1.5"/><text x="74" y="404">微信</text><text x="571" y="404" text-anchor="end">2.2 GB</text>
+      <rect x="31" y="440" width="28" height="28" rx="8" fill="#469ff5"/><path d="M38 449h14v9H38z" fill="none" stroke="#fff" stroke-width="1.5"/><text x="74" y="461">Xcode</text><text x="571" y="461" text-anchor="end">1.8 GB</text>
+    </g>
+    <path d="M28 498h8l4 4-4 4h-8" fill="none" stroke="#e2f2ff" stroke-width="1.5"/><text x="48" y="507" fill="#d9ecf8" font-size="13">其他应用进程</text><text x="582" y="507" fill="#b5d0e3" font-size="12" text-anchor="end">268</text>
+    <path d="M0 546H610" stroke="#d6edff" stroke-opacity=".13"/>
+    <text x="28" y="579" fill="#f3f8fc" font-size="13" font-weight="600">登录时启动</text><text x="28" y="598" fill="#acc9de" font-size="11">已开启</text>
+    <rect x="525" y="566" width="52" height="28" rx="14" fill="#168fff"/><circle cx="561" cy="580" r="11" fill="#fff"/>
+    <text x="28" y="644" fill="#a9c4d7" font-size="11">更新于 16:45</text>
+    <rect x="325" y="615" width="99" height="34" rx="9" fill="#f26879"/><text x="374" y="637" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">强制退出</text>
+    <rect x="438" y="615" width="106" height="34" rx="9" fill="#ffffff" fill-opacity=".12"/><text x="491" y="637" fill="#f0f7fb" font-size="12" font-weight="600" text-anchor="middle">活动监视器</text>
+    <text x="305" y="695" fill="#8fb4ce" font-size="11">界面示意，数据仅作展示</text>
+  </g>
+</svg>

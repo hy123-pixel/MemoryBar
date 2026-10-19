@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="520" viewBox="0 0 1440 520" role="img" aria-labelledby="title desc">
+  <title id="title">内存栏四步使用流程</title>
+  <desc id="desc">查看菜单栏用量、打开应用列表、选择应用并通过右键菜单结束应用的流程</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3f8ff"/><stop offset="1" stop-color="#e7f1fc"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#36b9f4"/><stop offset="1" stop-color="#347ff2"/></linearGradient>
+    <filter id="shadow" x="-.2" y="-.2" width="1.4" height="1.5"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#38618d" flood-opacity=".13"/></filter>
+    <style>text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC",sans-serif}.en{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}</style>
+  </defs>
+  <rect width="1440" height="520" rx="32" fill="url(#bg)"/>
+  <text x="720" y="72" fill="#183653" font-size="30" font-weight="750" text-anchor="middle">四步查看并管理应用内存</text>
+  <text x="720" y="103" fill="#64809b" font-size="15" class="en" text-anchor="middle">A quick, local workflow for your Mac.</text>
+  <g filter="url(#shadow)">
+    <rect x="65" y="150" width="285" height="264" rx="22" fill="#fff"/>
+    <rect x="385" y="150" width="285" height="264" rx="22" fill="#fff"/>
+    <rect x="705" y="150" width="285" height="264" rx="22" fill="#fff"/>
+    <rect x="1025" y="150" width="350" height="264" rx="22" fill="#fff"/>
+  </g>
+  <g stroke="#83a1bd" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M353 282h25m-7-7 7 7-7 7"/><path d="M673 282h25m-7-7 7 7-7 7"/><path d="M993 282h25m-7-7 7 7-7 7"/>
+  </g>
+  <g transform="translate(178 186)">
+    <circle cx="30" cy="30" r="30" fill="url(#accent)"/>
+    <path d="M20 23h20v15H20zM25 18v5m10-5v5m-10 15v5m10-5v5m-19-15h4m20 0h4m-28 8h4m20 0h4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <text x="30" y="90" fill="#879db2" font-size="12" font-weight="700" text-anchor="middle">01</text>
+    <text x="30" y="123" fill="#1d3a57" font-size="19" font-weight="700" text-anchor="middle">看菜单栏用量</text>
+    <text x="30" y="151" fill="#627f99" font-size="13" class="en" text-anchor="middle">Glance at memory use</text>
+    <text x="30" y="185" fill="#7a91a7" font-size="12" text-anchor="middle">当前内存占用始终可见</text>
+  </g>
+  <g transform="translate(498 186)">
+    <circle cx="30" cy="30" r="30" fill="url(#accent)"/>
+    <path d="M15 20h30v22H15zM21 26h18m-18 6h12" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="30" y="90" fill="#879db2" font-size="12" font-weight="700" text-anchor="middle">02</text>
+    <text x="30" y="123" fill="#1d3a57" font-size="19" font-weight="700" text-anchor="middle">点击查看应用</text>
+    <text x="30" y="151" fill="#627f99" font-size="13" class="en" text-anchor="middle">Open the app list</text>
+    <text x="30" y="185" fill="#7a91a7" font-size="12" text-anchor="middle">按内存占用查看主要应用</text>
+  </g>
+  <g transform="translate(818 186)">
+    <circle cx="30" cy="30" r="30" fill="url(#accent)"/>
+    <path d="M17 19h26v23H17zM22 25h16m-16 6h12m-12 6h9" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <text x="30" y="90" fill="#879db2" font-size="12" font-weight="700" text-anchor="middle">03</text>
+    <text x="30" y="123" fill="#1d3a57" font-size="19" font-weight="700" text-anchor="middle">选择目标应用</text>
+    <text x="30" y="151" fill="#627f99" font-size="13" class="en" text-anchor="middle">Select an application</text>
+    <text x="30" y="185" fill="#7a91a7" font-size="12" text-anchor="middle">核对名称与当前内存用量</text>
+  </g>
+  <g transform="translate(1135 186)">
+    <circle cx="30" cy="30" r="30" fill="#e34f64"/>
+    <path d="M18 20h24m-20 0 2 22h12l2-22m-12 6v10m8-10v10m-12-20 1-4h10l1 4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="30" y="90" fill="#879db2" font-size="12" font-weight="700" text-anchor="middle">04</text>
+    <text x="30" y="123" fill="#1d3a57" font-size="19" font-weight="700" text-anchor="middle">右键结束应用</text>
+    <text x="30" y="151" fill="#627f99" font-size="13" class="en" text-anchor="middle">End it from the menu</text>
+    <text x="30" y="185" fill="#7a91a7" font-size="12" text-anchor="middle">确认后结束，未保存内容可能丢失</text>
+  </g>
+  <rect x="65" y="446" width="1310" height="42" rx="14" fill="#dcebf9"/>
+  <circle cx="91" cy="467" r="9" fill="#3c9bee"/><path d="m87 467 3 3 5-6" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="111" y="472" fill="#42617f" font-size="13">数据在本机采集，不上传应用、进程或内存信息。结束应用前请先保存工作。</text>
+</svg>
