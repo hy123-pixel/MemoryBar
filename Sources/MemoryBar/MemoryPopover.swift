@@ -4,6 +4,7 @@ import SwiftUI
 struct MemoryPopover: View {
     @ObservedObject var monitor: MemoryMonitor
     @ObservedObject var loginItems: LoginItemManager
+    @ObservedObject var updates: UpdateManager
     @State private var showsBackgroundProcesses = false
     @State private var selectedItemID: String?
     @State private var itemPendingTermination: MemoryItem?
@@ -39,6 +40,14 @@ struct MemoryPopover: View {
             Button("好", role: .cancel) { loginItems.errorMessage = nil }
         } message: {
             Text(loginItems.errorMessage ?? "请稍后重试。")
+        }
+        .alert("软件更新", isPresented: Binding(
+            get: { updates.errorMessage != nil },
+            set: { if !$0 { updates.dismissError() } }
+        )) {
+            Button("好", role: .cancel) { updates.dismissError() }
+        } message: {
+            Text(updates.errorMessage ?? "请稍后重试。")
         }
         .confirmationDialog(
             itemPendingTermination.map {
@@ -252,6 +261,8 @@ struct MemoryPopover: View {
                 .controlSize(.mini)
             }
 
+            updateRow
+
             HStack(spacing: 8) {
                 Text("更新于 \(snapshot.sampledAt.formatted(date: .omitted, time: .standard))")
                     .font(.caption2)
@@ -291,5 +302,66 @@ struct MemoryPopover: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 11)
+    }
+
+    @ViewBuilder
+    private var updateRow: some View {
+        HStack(spacing: 8) {
+            switch updates.state {
+            case .idle:
+                Text("当前版本 v\(updates.displayVersion)")
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
+                Spacer()
+                Button("检查更新") { updates.checkForUpdates() }
+                    .controlSize(.small)
+            case .checking:
+                Text("正在检查更新…")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                Spacer()
+                ProgressView().controlSize(.small)
+            case .current:
+                Text("当前版本 v\(updates.displayVersion)，已是最新版本")
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
+                    .lineLimit(1)
+                Spacer(minLength: 2)
+                Button("重新检查") { updates.checkForUpdates() }
+                    .controlSize(.small)
+            case .available(let version):
+                Text("发现新版本 v\(version)")
+                    .font(.caption)
+                    .foregroundStyle(.primary)
+                Spacer()
+                Button("下载并更新") { updates.downloadAndInstall() }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.small)
+            case .downloading:
+                ProgressView().controlSize(.small)
+                Text("正在下载并校验更新…")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                Spacer()
+            case .installing:
+                ProgressView().controlSize(.small)
+                Text("正在准备安装…")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                Spacer()
+            case .restarting:
+                Text("更新完成，正在重启内存栏…")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                Spacer()
+            case .failed:
+                Text("更新失败")
+                    .font(.caption2)
+                    .foregroundStyle(.red)
+                Spacer()
+                Button("重试检查") { updates.checkForUpdates() }
+                    .controlSize(.small)
+            }
+        }
     }
 }

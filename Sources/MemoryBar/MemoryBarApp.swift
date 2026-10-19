@@ -17,6 +17,7 @@ struct MemoryBarApp: App {
 private final class MemoryBarAppDelegate: NSObject, NSApplicationDelegate {
     private var monitor: MemoryMonitor!
     private var loginItems: LoginItemManager!
+    private var updates: UpdateManager!
     private var statusItem: NSStatusItem!
     private let popover = NSPopover()
     private var snapshotObserver: AnyCancellable?
@@ -27,6 +28,7 @@ private final class MemoryBarAppDelegate: NSObject, NSApplicationDelegate {
 
         monitor = MemoryMonitor()
         loginItems = LoginItemManager()
+        updates = UpdateManager()
 
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         configureStatusButton()
@@ -56,7 +58,7 @@ private final class MemoryBarAppDelegate: NSObject, NSApplicationDelegate {
         popover.behavior = .transient
         popover.contentSize = NSSize(width: 380, height: 500)
         popover.contentViewController = NSHostingController(
-            rootView: MemoryPopover(monitor: monitor, loginItems: loginItems)
+            rootView: MemoryPopover(monitor: monitor, loginItems: loginItems, updates: updates)
         )
     }
 

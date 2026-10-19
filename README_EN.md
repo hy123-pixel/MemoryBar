@@ -11,6 +11,7 @@ MemoryBar is a macOS menu bar memory monitor. It shows current memory usage in t
 - Hides apps below 64 MB by default and excludes macOS system services from the termination list.
 - Expands to show other app processes; select an item to end it from the context menu or footer.
 - Optional launch at login and a shortcut to Activity Monitor.
+- Checks GitHub Releases for updates at launch and periodically; users can choose to download and install an update directly.
 - Collects data locally; app, process, and memory data are not uploaded.
 
 Ending an app or process can cause unsaved data loss. Memory figures may differ from Force Quit or Activity Monitor because of sampling time, physical-footprint accounting, and how macOS groups helper processes.
@@ -47,7 +48,7 @@ Artifacts are written to `dist/`. Pushing a version tag matching `v*` triggers a
 
 ## Privacy and permissions
 
-MemoryBar reads memory information through local macOS process APIs. It does not require administrator access or make network requests. macOS may restrict access to some processes, so the list may not contain every system process.
+MemoryBar reads memory information through local macOS process APIs and does not require administrator access. Update checks connect to GitHub; an app archive is downloaded only after the user chooses to update, and its SHA-256 checksum is verified before installation. Process, app, and memory data are not uploaded. macOS may restrict access to some processes, so the list may not contain every system process.
 
 The launch-at-login switch uses the macOS Login Items service. If approval is required, allow MemoryBar in **System Settings → General → Login Items**.
 
