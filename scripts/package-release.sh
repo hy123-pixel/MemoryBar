@@ -17,7 +17,8 @@ fi
 mkdir -p "$DIST_DIR"
 ditto -c -k --sequesterRsrc --keepParent "$APP_DIR" "$TEMP_ARCHIVE"
 mv "$TEMP_ARCHIVE" "$ARCHIVE"
-shasum -a 256 "$ARCHIVE" > "$ARCHIVE.sha256"
+ARCHIVE_NAME="$(basename "$ARCHIVE")"
+(cd "$DIST_DIR" && shasum -a 256 "$ARCHIVE_NAME" > "$ARCHIVE_NAME.sha256")
 
 printf 'Packaged %s\n' "$ARCHIVE"
 cat "$ARCHIVE.sha256"
